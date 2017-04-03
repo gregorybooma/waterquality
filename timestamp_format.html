@@ -1,0 +1,144 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/global.css" />
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="container" class="container">
+		<div class="header">
+			<p>
+			<a href="http://seagrant.mit.edu/ecosys_health.php"><img src="http://massbay.mit.edu/mitis/header.gif" width="439" height="44" border="0" alt="MIT Sea Grant Center for Coastal Resources"></a>
+			</p>
+			<p>
+				<div class="subNav"></div>
+			</p>
+		</div>
+	<h2>
+		Timestamp Format
+	</h2>
+	<p>
+		All tables uploaded to our database must include a column containing well-formed timestamps. Examples of valid formats are given below. Most importantly, the timestamp must be in MDY (month, day, year) mode or an ISO 8601 ambiguous format (see "in any mode" in examples). Using any other mode will corrupt your timestamp. To illustrate: 08/07/12 is Aug. 7, 2012 in MDY mode; July 8, 2012 in DMY mode; and July 12, 2008 in YMD mode. Please double-check your timestamp column before uploading your data.
+		<br><br>Any combination of the date and time elements is acceptable, provided that the date is included and appears first. Time may be omitted, but note that this will set the time to midnight on the date specified.
+	</p>
+	<b>Valid Date Formats</b>
+
+<p>
+<table>
+	<tr>
+		<th>Example </th> <th>Description (MDY = month, day, year)</th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td>1999-01-08</td> <td>ISO 8601; January 8 in any mode (recommended format)</td>
+	</tr>
+	<tr>
+		<td>January 8, 1999</td> <td>unambiguous in any datestyle input mode</td>
+	</tr>
+	<tr>
+		<td>1/8/1999</td> <td>January 8 in MDY mode; user *must* ensure MDY mode</td>
+	</tr>
+	<tr>
+		<td>01/02/03</td> <td>January 2, 2003 in MDY mode; user *must* ensure MDY mode</td>
+	</tr>
+	<tr>
+		<td>1999-Jan-08</td> <td>January 8 in any mode</td>
+	</tr>
+	<tr>
+		<td>Jan-08-1999</td> <td>January 8 in any mode</td>
+	</tr>
+	<tr>
+		<td>08-Jan-1999</td> <td>January 8 in any mode</td>
+	</tr>
+	<tr>
+		<td>08-Jan-99</td> <td>January 8, error in YMD mode</td>
+	</tr>
+	<tr>
+		<td>Jan-08-99</td> <td>January 8, error in YMD mode</td>
+	</tr>
+	<tr>
+		<td>19990108</td> <td>ISO 8601; January 8, 1999 in any mode</td>
+	</tr>
+	<tr>
+		<td>990108</td> <td>ISO 8601; January 8, 1999 in any mode</td>
+	</tr>
+	<tr>
+		<td>1999.008</td> <td>year and day of year</td>
+	</tr>
+	<tr>
+		<td>J2451187</td> <td>Julian day</td>
+	</tr>
+</table>
+</p>
+
+
+	<b>Valid Time Formats</b>
+<p>
+<table>
+	<tr>
+		<th>Example</th> <th>Description</th>
+	</tr>
+	<tr>
+		<td>04:05:06</td> <td>ISO 8601 (recommended format)</td>
+	</tr>
+	<tr>
+		<td>04:05:06.789</td> <td>ISO 8601</td>
+	</tr>
+	<tr>
+		<td>04:05</td> <td>ISO 8601</td>
+	</tr>
+	<tr>
+		<td>040506</td> <td>ISO 8601</td>
+	</tr>
+	<tr>
+		<td>04:05 AM</td> <td>same as 04:05; AM does not affect value</td>
+	</tr>
+	<tr>
+		<td>04:05 PM</td> <td>same as 16:05; input hour must be <= 12</td>
+	</tr>
+</table>
+</p>
+
+	<b>Time Zone Support</b>
+	<p>
+		For the sake of consistency and metadata, we require the user to select the reference time zone name as part of the upload process. In situations where it is impractical for the user to reformat the timestamp, time zone information is supported if it is valid (i.e. it will not cause an error), but it will be ignored in favor of the user-provided time zone. Accepted forms are as follows:
+	</p>
+
+<p>
+<table>
+	<tr>
+		<th>Example</th> <th>Description</th>
+	</tr>
+	<tr>
+		<td>PST</td> <td>Abbreviation (for Pacific Standard Time)</td>
+	</tr>
+	<tr>
+		<td>America/New_York</td> <td>Full time zone name</td>
+	</tr>
+	<tr>
+		<td>PST8PDT</td> <td>POSIX-style time zone specification</td>
+	</tr>
+	<tr>
+		<td>-8:00</td> <td>ISO-8601 offset for PST</td>
+	</tr>
+	<tr>
+		<td>-800</td> <td>ISO-8601 offset for PST</td>
+	</tr>
+	<tr>
+		<td>-8</td> <td>ISO-8601 offset for PST</td>
+	</tr>
+	<tr>
+		<td>zulu</td> <td>Military abbreviation for UTC</td>
+	</tr>
+	<tr>
+		<td>z</td> <td>Short form of zulu</td>
+	</tr>
+</table>
+</p>
+
+</div>
+</body>
+</html>

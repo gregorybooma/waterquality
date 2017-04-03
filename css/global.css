@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/* GLOBAL STYLE SHEET FOR WATER QUALITY SERVICE */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html, body {
+    height:100%;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	font-size:1.02em;
+	width: 100%;
+	background-color: #FFFFFF;
+	color: #333333;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.container {
+	width: 90%;
+	/*max-width: 950px;*/
+	margin: 20px auto;
+}
+
+.header {
+	width: 100%;
+	clear: both;
+}
+
+.subNav {
+	width: 100%;
+	height: 10px;
+	clear: both;
+	background-color: #0000FF;
+}

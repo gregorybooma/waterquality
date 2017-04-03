@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="mootools.svn.js"></script>
+<script type="text/javascript">
+window.addEvent('domready', function(){
+	var accordion = new Accordion('h3.menusection', 'div.menusection', {
+		opacity: false,
+		onActive: function(toggler, element){
+			toggler.setStyle('color', '#333333');
+			toggler.setStyle('background', '#FFFFCC');
+
+		},
+		
+		onBackground: function(toggler, element){
+			toggler.setStyle('color', '#FFFFFF');
+			toggler.setStyle('background', '#999999');
+
+		}
+	}, $('accordion'));
+}); 
+</script>
+<style type="text/css">
+body{font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; font-size:11px; }
+
+.nav_col_clr_bpm {border:0; padding:0; margin:0; list-style:none;}
+
+h3 {border:0; padding:0; margin:0; list-style:none;}
+
+#main{width:500px; margin:10px auto;}
+	#accordion li{border-bottom:solid 1px #DEDEDE;}
+	#accordion li a{padding:3px 6px; display:block; text-decoration:none;}
+	#accordion li a:hover{background:#EFEFEF;}
+ </style>
+</head>
+
+<body>
+ <div id="main">
+    <div id="accordion">
+    <h3 class="toggler menusection" style="background:#CCCCCC; padding:4px; font-size:12px; color:#999999; border-bottom:solid 2px #999999;">Menu section 1</h3>
+    <div class="element menusection">
+    <ul class="nav_col_clr_bpm">
+      <li class="nav_col_clr_bpm"><a href="#1">Link 1</a></li>
+      <li class="nav_col_clr_bpm"><a href="2">Link 2</a></li>
+      <li class="nav_col_clr_bpm"><a href="3">Link 3</a></li>
+      <li class="nav_col_clr_bpm"><a href="4">Link 4</a></li>
+    </ul>
+    </div>
+    
+    <h3 class="toggler menusection" style="background:#CCCCCC; padding:4px; font-size:12px; color:#999999; border-bottom:solid 2px #999999;">Menu section 2</h3>
+    <div class="element menusection">
+      <ul>
+        <li><a href="#1">Link 1</a></li>
+        <li><a href="2">Link 2</a></li>
+        <li><a href="3">Link 3</a></li>
+        <li><a href="4">Link 4</a></li>
+      </ul>
+    </div>
+    
+    
+    <h3 class="toggler menusection" style="background:#CCCCCC; padding:4px; font-size:12px; color:#999999; border-bottom:solid 2px #999999;">Menu Section 3</h3>
+    <div class="element menusection">
+      <ul>
+        <li><a href="#1">Link 1</a></li>
+        <li><a href="2">Link 2</a></li>
+        <li><a href="3">Link 3</a></li>
+        <li><a href="4">Link 4</a></li>
+      </ul>
+    </div>
+    
+    </div>
+</div>
+ 
+</body>
+</html>

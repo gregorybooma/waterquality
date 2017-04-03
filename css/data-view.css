@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* STYLE SHEET FOR DATA-VIEW.PHP */
+
+.nav-col {
+	float: left;
+	width: 150px;
+	padding: 5px;
+	font-size: 0.875em;
+}
+
+.query-col {
+	float: left;
+	width: 200px;
+	padding: 5px;
+	font-size: 0.875em;
+}
+
+#nodeList {
+	font-size: 0.875em;
+}
+
+#queryform {
+	font-size: 0.875em;
+}
+
+#theFooter {
+	display: inline;
+	width: 100%;
+	float: left;
+	clear: left;
+}
+#theFooter div {
+	float: left;
+	display: inline;
+	clear: left;
+}
